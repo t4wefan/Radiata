@@ -48,6 +48,7 @@ def webui():
         server_port=config.get("port"),
         share=config.get("share"),
         prevent_thread_lock=True,
+        server_name="0.0.0.0",
     )
     post_load()
     wait_on_server()
