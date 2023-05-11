@@ -44,7 +44,6 @@ def webui():
     PostUICreateEvent.call_event(PostUICreateEvent(app=app))
     app.queue(64)
     app, local_url, share_url = app.launch(
-        server_name=config.get("host"),
         server_port=config.get("port"),
         share=config.get("share"),
         prevent_thread_lock=True,
